@@ -371,7 +371,7 @@ GameObject:
   m_Component:
   - component: {fileID: 188858598}
   - component: {fileID: 188858597}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: stars
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -415,8 +415,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 1695864889
-  m_SortingLayer: 0
+  m_SortingLayerID: 519637213
+  m_SortingLayer: 1
   m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 57fad2ccdd78aab46b27af59b01b2c18, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -437,8 +437,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 188858596}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 458.8, y: 248, z: 7.3}
-  m_LocalScale: {x: 10.991457, y: 10.689947, z: 2.5570817}
+  m_LocalPosition: {x: 458.8, y: 248, z: 0}
+  m_LocalScale: {x: 10.991457, y: 10.689947, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 4
@@ -989,7 +989,7 @@ GameObject:
   m_Component:
   - component: {fileID: 717846312}
   - component: {fileID: 717846311}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: logo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1033,8 +1033,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -1094593167
+  m_SortingLayer: 4
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 5a21cf61767c6984ca5d0918b185738c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -1055,8 +1055,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 717846310}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 449.9, y: 422.2, z: 7.3}
-  m_LocalScale: {x: 15.54878, y: 15.54878, z: 15.54878}
+  m_LocalPosition: {x: 449.9, y: 422.2, z: 0}
+  m_LocalScale: {x: 15.54878, y: 15.54878, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 5
@@ -1198,8 +1198,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 1695864889
-  m_SortingLayer: 0
+  m_SortingLayerID: 519637213
+  m_SortingLayer: 1
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 3fcf392b97e258344863573177de091a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -1220,8 +1220,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 839268874}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 453.9, y: 248.8, z: 7.3}
-  m_LocalScale: {x: 11.27791, y: 11.656727, z: 2.5570817}
+  m_LocalPosition: {x: 453.9, y: 248.8, z: 0}
+  m_LocalScale: {x: 11.27791, y: 11.656727, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 3
