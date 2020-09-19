@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class CheckStar : MonoBehaviour
 {
-    public GameObject prevCircle; // Defines the position of the previous circle (or tune) in the constellation
+    public GameObject prevCircle;
     private Transform prevCirclePos;
 
     [HideInInspector]
@@ -13,13 +13,13 @@ public class CheckStar : MonoBehaviour
 
     private void Start()
     {
-        line = gameObject.GetComponent<LineRenderer>();
-        prevCirclePos = prevCircle.transform;
+        line = gameObject.GetComponent<LineRenderer>(); // Gets the linerenderer component from the circle's gameobject
+        prevCirclePos = prevCircle.transform; // Gets the position of the previous circle in the constellation
     }
 
     private void Update()
     {
-        if (starFound)
+        if (starFound) // Draw a connecting line between two stars as long as the previous star was dropped in the correct circle
         {
             if (prevCircle.GetComponent<CheckStar>().starFound == false)
             {
