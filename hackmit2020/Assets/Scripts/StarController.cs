@@ -4,13 +4,16 @@ using UnityEngine;
 
 public class StarController : MonoBehaviour
 {
+    public AudioSource tunes; // Creates an audio player
+    public AudioClip note; // Fetches a particular clip / file
+
     public Transform circlePos; // The position of the circle where we will drag the star
 
     private Vector2 initialPos; // The star's fixed position
     private Vector2 mousePos; // Defines the cursor's position
 
     private float deltaX, deltaY; // Define offset to make movement more smooth
-    public static bool locked; // Becomes true when the star is dropped at a circle
+    private bool locked; // Becomes true when the star is dropped at a circle
 
     private void Start()
     {
@@ -27,11 +30,16 @@ public class StarController : MonoBehaviour
                 deltaY = Camera.main.ScreenToWorldPoint(Input.mousePosition).y - transform.position.y;
             }
         }
+
+        if (Input.GetMouseButtonDown(1)) // If right clicked is pressed over the star, play a sound
+        {
+            tunes.PlayOneShot(note); // Plays one instance of the clip specified
+        }
     }
 
     private void OnMouseDrag()
     {
-        if (Input.GetMouseButton(0)) //&& !locked)
+        if (Input.GetMouseButton(0) && !locked) // Only become dragable if it hasn't been placed correctly yet
         {
             // Translates the cursor's position the screen to a position on the scene that the object can interpret
             mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
@@ -49,7 +57,12 @@ public class StarController : MonoBehaviour
                 Mathf.Abs(transform.position.y - circlePos.position.y) <= 1.2f)
             {
                 transform.position = new Vector2(circlePos.position.x, circlePos.position.y);
-                locked = true;
+                locked = true; // Lock position if the star was placed correctly
+
+                // play 'correct star' sound & animation
+                tunes.PlayOneShot(note);
+                Debug.Log("star was correct");
+                circlePos.GetComponent<CheckStar>().starFound = true;
             }
             else
             {
@@ -57,11 +70,4 @@ public class StarController : MonoBehaviour
             }
         }
     }
-
-    /* private void OnCollisionEnter2D(Collision2D other)
-    {
-        if (other.gameObject.CompareTag("Circle")) {
-            if (other.GetComponent(correctStar);
-        }
-    }*/
 }
