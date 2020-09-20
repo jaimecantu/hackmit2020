@@ -135,8 +135,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d72f348b6cd0c43f29cfef351d9f11c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  correctStar: 0
-  nextCircle: {fileID: 0}
+  prevCircle: {fileID: 0}
+  starFound: 0
+  allStarsFound: 0
+  isThisEnd: 0
+  tunes: {fileID: 0}
+  noteSequence: []
 --- !u!120 &4036215884287669594
 LineRenderer:
   m_ObjectHideFlags: 0
