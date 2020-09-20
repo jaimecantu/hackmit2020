@@ -22,6 +22,7 @@ public class StarController : MonoBehaviour
 
     private void OnMouseOver()
     {
+        //If your mouse hovers over the GameObject with the script attached, output this message
         if (Input.GetMouseButtonDown(0)) // Updates every frame while left click is being pressed
         {
             if (!locked) // Only allow it to have space to move if the object is unlocked

@@ -27,7 +27,19 @@ public class sceneChanger : MonoBehaviour
     {
         SceneManager.LoadScene("Level1");
     }
+    public void gotoLevel2()
+    {
+        SceneManager.LoadScene("Level2");
+    }
 
+    public void gotoLevel3()
+    {
+        SceneManager.LoadScene("Level3");
+    }
+    public void gotoLevel4()
+    {
+        SceneManager.LoadScene("Level4");
+    }
 
     IEnumerator Level1()
     {
