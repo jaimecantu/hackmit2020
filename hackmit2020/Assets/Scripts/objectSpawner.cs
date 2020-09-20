@@ -13,7 +13,7 @@ public class objectSpawner : MonoBehaviour
         if (mouseOverUI())
         {
             //Debug.Log("mouse over UI");
-            if (Input.GetMouseButtonDown(1))
+            if (Input.GetMouseButtonDown(0) || Input.GetMouseButtonDown(1))
             {
                 Debug.Log("mouse down");
                 Instantiate(prefab, spawnpoint.position, spawnpoint.rotation);
