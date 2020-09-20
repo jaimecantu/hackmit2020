@@ -25,13 +25,13 @@ public class AudioController : MonoBehaviour
         }
         else
         {
-            Destroy(gameObject);
+            Destroy(gameObject); // If the build already has an Audio Source, destroy the new one
         }
     }
 
     private void Update()
     {
-        if (SceneManager.GetActiveScene().buildIndex > 1 && !levelLoaded)
+        if (SceneManager.GetActiveScene().buildIndex > 1 && !levelLoaded) // Switch to levelBGM
         {
             BGM.Stop();
             BGM.clip = levelBGM;
@@ -39,7 +39,7 @@ public class AudioController : MonoBehaviour
             levelLoaded = true;
             menuLoaded = false;
         }
-        else if (SceneManager.GetActiveScene().buildIndex <= 1 && !menuLoaded)
+        else if (SceneManager.GetActiveScene().buildIndex <= 1 && !menuLoaded) // Switch to menuBGM
         {
             BGM.Stop();
             BGM.clip = menuBGM;

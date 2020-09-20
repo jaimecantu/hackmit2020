@@ -345,6 +345,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ffe15c618d90c4129912660fb3ba5a19, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  BGM: {fileID: 341457758}
+  menuBGM: {fileID: 8300000, guid: fd30fe922f0073c4dafb39de52e9e4dc, type: 3}
+  levelBGM: {fileID: 8300000, guid: 110b3c8cc46e6304c89a457725c87ac9, type: 3}
 --- !u!1 &748821821
 GameObject:
   m_ObjectHideFlags: 0

@@ -18,6 +18,7 @@ public class StarController : MonoBehaviour
     private void Start()
     {
         initialPos = transform.position; // Initial position is defined by where its placed on the scene at start
+        tunes.clip = note;
     }
 
     private void OnMouseOver()
