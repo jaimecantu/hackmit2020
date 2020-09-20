@@ -9,6 +9,8 @@ public class CheckStar : MonoBehaviour
 
     [HideInInspector]
     public bool starFound; // If a star was dropped correctly, make this true
+    [HideInInspector]
+    public bool allStarsFound; // Checks if level is complete if all stars were placed correctly
     private LineRenderer line; // Will draw a line between two stars
 
     public bool isThisEnd = false;
@@ -33,10 +35,23 @@ public class CheckStar : MonoBehaviour
             {
                 line.SetPosition(0, transform.position);
                 line.SetPosition(1, prevCirclePos.position);
+
                 if (isThisEnd)
                 {
-                    StartCoroutine(PlaySong());
-                    isThisEnd = false;
+                    allStarsFound = true;
+                    for (int i = 0; i < noteSequence.Length; i++)
+                    {
+                        if (!noteSequence[i].GetComponent<StarController>().locked)
+                        {
+                            allStarsFound = false;
+                        }
+                    }
+                    if (allStarsFound)
+                    {
+                        StartCoroutine(PlaySong());
+                        isThisEnd = false;
+                    }
+                    
                 }
             }
         }

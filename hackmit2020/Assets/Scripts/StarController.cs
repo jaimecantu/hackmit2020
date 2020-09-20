@@ -13,7 +13,8 @@ public class StarController : MonoBehaviour
     private Vector2 mousePos; // Defines the cursor's position
 
     private float deltaX, deltaY; // Define offset to make movement more smooth
-    private bool locked; // Becomes true when the star is dropped at a circle
+    [HideInInspector]
+    public bool locked; // Becomes true when the star is dropped at a circle
 
     private void Start()
     {
